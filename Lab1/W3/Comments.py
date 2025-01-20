@@ -1,4 +1,4 @@
 """
-Mans tatak
+Mans krasavchik
 """
 print("Hello, World!")
