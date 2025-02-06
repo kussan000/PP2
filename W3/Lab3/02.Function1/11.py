@@ -1,5 +1,5 @@
 def is_palindrome(s):
-    s = s.replace(" ", "").lower()  # Убираем пробелы и приводим к нижнему регистру
+    s = s.replace(" ", "").lower() 
     return s == s[::-1]
 
 #Example
