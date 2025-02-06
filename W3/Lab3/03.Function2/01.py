@@ -80,4 +80,4 @@ def is_highly_rated(movie):
     return movie["imdb"] > 5.5
 
 #Example
-print(is_highly_rated(movies[0]))
+print(is_highly_rated(movies[7]))

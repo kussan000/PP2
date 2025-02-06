@@ -76,9 +76,17 @@ movies = [
 }
 ]
 
+def movies_by_category(movie_list, category):
+    return [movie for movie in movie_list if movie["category"] == category] # 03.py
+
+def average_imdb(movie_list):
+    if not movie_list:
+        return 0  
+    return sum(movie["imdb"] for movie in movie_list) / len(movie_list) # 04.py
+
 def average_imdb_by_category(movie_list, category):
-    category_movies = movies_by_category(movie_list, category) # type: ignore
-    return average_imdb(category_movies) # type: ignore
+    category_movies = movies_by_category(movie_list, category) 
+    return average_imdb(category_movies) 
 
 #Example
-print(average_imdb_by_category(movies, "Romance")) # type: ignore
+print(average_imdb_by_category(movies, "Romance")) 

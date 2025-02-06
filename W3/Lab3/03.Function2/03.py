@@ -80,4 +80,4 @@ def movies_by_category(movie_list, category):
     return [movie for movie in movie_list if movie["category"] == category]
 
 #Example
-print(movies_by_category(movies, "Romance"))  
+print(movies_by_category(movies, "Thriller"))  
