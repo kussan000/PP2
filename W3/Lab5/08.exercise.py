@@ -1,7 +1,7 @@
 import re 
 
 
-with open("W3/Lab5/row-8-exercise.txt") as f:
+with open("W3/Lab5/08.row_exercise.txt") as f:
     data = f.read()
     
 print("Task 8")
