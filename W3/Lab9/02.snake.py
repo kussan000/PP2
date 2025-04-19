@@ -3,6 +3,7 @@ import random
 import time
 
 pygame.init()
+s = pygame.mixer.Sound(r"C:\Users\Krasavchic\Downloads\Kajjrat_Nurtas_-_Mejjli_74910835.mp3")
 
 screen_width = 600
 screen_height = 400
@@ -71,12 +72,16 @@ def game_loop():
             elif event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_LEFT and snake_direction != 'RIGHT':
                     snake_direction = 'LEFT'
+                    s.play()
                 elif event.key == pygame.K_RIGHT and snake_direction != 'LEFT':
                     snake_direction = 'RIGHT'
+                    s.play()
                 elif event.key == pygame.K_UP and snake_direction != 'DOWN':
                     snake_direction = 'UP'
+                    s.play()
                 elif event.key == pygame.K_DOWN and snake_direction != 'UP':
                     snake_direction = 'DOWN'
+                    s.play()
                 elif event.key == pygame.K_q:
                     game_running = False
                 elif event.key == pygame.K_r:
@@ -84,13 +89,17 @@ def game_loop():
 
         head_x, head_y = snake_positions[0]
         if snake_direction == 'LEFT':
+            s.play()
             head_x -= grid_size
         elif snake_direction == 'RIGHT':
             head_x += grid_size
+            s.play()
         elif snake_direction == 'UP':
             head_y -= grid_size
+            s.play()
         elif snake_direction == 'DOWN':
             head_y += grid_size
+            s.play()
 
         if head_x < 0 or head_x >= screen_width or head_y < 0 or head_y >= screen_height:
             game_over()
