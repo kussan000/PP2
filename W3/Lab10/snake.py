@@ -130,7 +130,7 @@ def game_loop(username, start_level):
         snake = [(x, y)] + snake[:-1]
 
         if (x, y) in snake[1:]:
-            break
+            break   
 
         for food in food_list[:]:
             if x == food.x and y == food.y:
